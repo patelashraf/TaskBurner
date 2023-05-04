@@ -1,0 +1,185 @@
+ body {
+    background: rgb(238,174,202);
+    background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
+}
+
+.Logo{
+    font-size: 40px;
+    font-weight: 800;
+    color: #F1C40F !important;
+    border: 1px solid;
+    padding: 0.4em;
+    
+}
+
+header{
+    font-size: 20px;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+nav ul li a,
+nav ul li a:after,
+nav ul li a:before {
+  transition: all .5s;
+}
+nav ul li a:hover {
+  color: #555;
+}
+
+nav.shift ul li a {
+    position:relative;
+    z-index: 1;
+  }
+  nav.shift ul li a:hover {
+    color: #91640F;
+  }
+  nav.shift ul li a:after {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+    width: 100%;
+    height: 1px;
+    content: '.';
+    color: transparent;
+    background: #F1C40F;
+    visibility: none;
+    opacity: 0;
+    z-index: -1;
+  }
+  nav.shift ul li a:hover:after {
+    opacity: 1;
+    visibility: visible;
+    height: 100%;
+  }
+  
+
+ /* Styling for the container */
+.col-edit {
+    background-color: #f2f2f2;
+    padding: 20px;
+    border: 1px solid black !important;
+    border-radius: 5px;
+    margin: 1em !important;
+
+  }
+
+  
+  /* Styling for the heading */
+  h2 {
+    font-size: 22px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    font-weight: 700;
+  }
+  
+  /* Styling for the task list */
+  #task-list {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  /* Styling for each task item */
+  .main-section li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    background-color: rgba(0,0,0,0.1);
+    padding: 0.5em;
+    font-size: 17px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+  }
+  
+  /* Styling for the checkbox */
+  input[type="checkbox"] {
+    transform : scale(1.7);
+    padding-left: 1em;
+    
+  }
+
+  .task-description {
+    flex-grow: 1;
+    margin-right: 10px;
+    font-size: 16px;
+  }
+  
+  /* Styling for the delete button */
+  .delete-button {
+    background-color: #4a81d6;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    font-size: 14px;
+    border-radius: 3px;
+  }
+
+  .delete-button:hover {
+    background-color: red;
+  }
+
+  form {
+    padding-bottom: 0.7em;
+    
+  }
+
+  .btn-submit {
+    display: inline-block;
+    padding: 7px 24px;
+    text-align: center;
+    text-decoration: none;
+    background-color:#ef214b;
+    color: #fff;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    width: 40%;
+    animation: pulse 1.5s infinite;
+}
+  .btn-submit::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 0;
+    height: 0;
+    opacity: 0;
+    transition: all 0.4s ease;
+    z-index: -1;
+
+  }
+
+  .btn-submit:hover {
+    background-color: #3f5efb;
+  }
+
+  @keyframes pulse {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.05);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+
+.btn-clear {
+    background-color: #8852b1;
+}
+  /* Styling when task item is completed */
+  li.completed .task-description {
+    text-decoration: line-through;
+    color: #888;
+  }
+  
